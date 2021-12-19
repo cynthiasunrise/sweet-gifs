@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Header from './components/Header';
+import Results from './components/Results';
+import Search from './components/Search';
 
 function App() {
+  const [gifs, setGifs] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [isTrending, setIsTrending] = useState(true);
+
+  const searchGifs = (data) => {
+    setGifs(data);
+    setLoading(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Search
+        setLoading={setLoading}
+        setIsTrending={setIsTrending}
+        searchGifs={searchGifs}
+      />
+      <Results
+        gifs={gifs}
+        searchGifs={searchGifs}
+        loading={loading}
+        setLoading={setLoading}
+        isTrending={isTrending}
+      />
     </div>
   );
 }

@@ -1,0 +1,39 @@
+.results {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.results .container {
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: center;
+  gap: 1rem;
+}
+
+.results__loading g {
+  fill: var(--primary);
+}
+
+.results__loading path {
+  stroke: var(--primary);
+}
+
+.results__title,
+.noresults__text {
+  margin-bottom: 1rem;
+  font-size: var(--font-size-texto-title);
+}
+
+.results__gif {
+  width: 250px;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 0px rgba(179, 179, 179, 0.4);
+}
+
+.noresults__icon {
+  margin-right: 0.5rem;
+  color: var(--color-primary);
+}

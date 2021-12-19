@@ -1,0 +1,118 @@
+.search .search__container {
+  width: 80%;
+  height: 40vh;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 550px) {
+  .search .search__container {
+    height: 45vh;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .search__container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .search__container {
+    width: 70%;
+  }
+}
+
+.searchImg {
+  margin: 1rem auto 0;
+  width: 95%;
+  display: block;
+}
+
+@media screen and (min-width: 400px) {
+  .searchImg {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .searchImg {
+    width: 70%;
+  }
+}
+
+.searchControl {
+  position: relative;
+}
+
+.searchControl form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .searchControl form {
+    height: 2.8rem;
+  }
+}
+
+.searchTerm {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--primary);
+  border-right: none;
+  border-radius: 100px 0 0 100px;
+  outline: none;
+  padding: 1.2em 1em;
+  color: var(--input-text-color);
+  background-color: var(--background);
+  font-size: var(--font-size-texto-input);
+  transition: background-color 0.5s ease;
+}
+
+.searchTerm::placeholder {
+  color: #adb5bd;
+}
+
+.searchButton {
+  width: 3rem;
+  height: 100%;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--search-icon-color);
+  border-radius: 0 100px 100px 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.search__suggestions {
+  position: absolute;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  background-color: var(--background);
+  text-align: start;
+  font-size: var(--font-size-texto-title);
+  transition: background-color 0.5s ease;
+}
+
+.search__suggestion {
+  line-height: 1;
+  cursor: pointer;
+}
+
+.search__suggestion:first-of-type {
+  padding: 0.8em 1em;
+}
+
+.search__suggestions > * + * {
+  padding: 0 1em 0.8em;
+}
