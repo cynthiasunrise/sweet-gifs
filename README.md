@@ -2,7 +2,7 @@
 
 - **Framework**: [CRA-Create React App](https://create-react-app.dev/)
 - **Styling**: CSS
-- **API**: [Giphy] (https://giphy.com/)
+- **API**: [Giphy](https://giphy.com/)
 - **Deployment**: [Netlify](https://www.netlify.com/)
 
 ## Running Locally
