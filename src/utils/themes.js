@@ -4,13 +4,9 @@ const THEME = {
 };
 
 export const toggleTheme = (switchValue) => {
-  // No recomendable en Performance. La idea es tener los estados controlados por React. Manipulación del DOM controlada (referencias - useRef).
   document.documentElement.className = switchValue
     ? THEME.LIGHT.name
     : THEME.DARK.name;
-  // Y si se borra la cache?
-  // Session Storage para tener tema para cada usuario
-  // QA
   localStorage.setItem(
     'theme',
     switchValue ? THEME.LIGHT.name : THEME.DARK.name

@@ -14,7 +14,6 @@ function Switch() {
   };
 
   return (
-    // ROLE buena práctica para el SEO y ACCESIBILIDAD
     <label
       role="switch"
       aria-checked={switchValue}
